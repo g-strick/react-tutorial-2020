@@ -5,20 +5,32 @@ import React from "react";
 import ReactDom from "react-dom";
 
 // all react functions are capitalized
-function Greeting() {
+function Booklist() {
   // JSX - javascript XML
   return (
-    <>
-      <Person />
-      <Message />
-    </>
+    <section>
+      <Book />
+    </section>
   );
 }
 
-const Person = () => <h1>john doe</h1>;
-const Message = () => {
-  return <p>this is my message</p>;
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
 };
+const Image = () => (
+  <img
+    src='https://images-na.ssl-images-amazon.com/images/I/A1pI53UQHvL._AC_UL200_SR200,200_.jpg'
+    alt=''
+  ></img>
+);
 
+const Title = () => <h1>Bronco and Friends: A Party to Remember</h1>;
+const Author = () => <h4>Tim Tebow</h4>;
 // what were goting to render, where we're going to render it
-ReactDom.render(<Greeting />, document.getElementById("root"));
+ReactDom.render(<Booklist />, document.getElementById("root"));
