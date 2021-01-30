@@ -3,12 +3,16 @@
 import React from "react";
 /* The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside of the React model if you need to. Most of your components should not need to use this module.*/
 import ReactDom from "react-dom";
-
+import "./index.css";
 // all react functions are capitalized
 function Booklist() {
   // JSX - javascript XML
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
@@ -16,7 +20,7 @@ function Booklist() {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
